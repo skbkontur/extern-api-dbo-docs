@@ -1,0 +1,25 @@
+Статусы ленты событий
+=====================
+
+.. _rst-markup-event-state:
+
+Поле new-state в модели ApiEvent транслирует статусы ленты событий для каждого типа документооборота.
+
+ФНС
+---
+
+Декларация и 2-НДФЛ
+~~~~~~~~~~~~~~~~~~~
+
+.. csv-table:: 
+   :header: "Статус", "Описание"
+   :widths: 20 40
+
+   "urn:transaction:report", "Декларация"
+   "urn:transaction:report-receipt", "Подтверждение о получении отчета налоговым органом"
+   "urn:transaction:receipt-date-confirmation-cu", "Получено подтверждение даты отправки налоговым органом"
+   "urn:transaction:acceptance-result-positive", "Отчет принят налоговым органом"
+   "urn:transaction:acceptance-result-negative", "Отчет отклонен налоговым органом"
+   "urn:transaction:processing-result-ok", "Отчет обработан успешно"
+   "urn:transaction:acceptance-result-2ndfl", "Отчет 2-НДФЛ принят"
+

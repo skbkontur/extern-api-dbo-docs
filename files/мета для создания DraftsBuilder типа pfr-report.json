@@ -1,0 +1,24 @@
+{
+  "sender": {
+      "inn": "7381415822",
+      "kpp": "111135111",
+      "name": "",
+      "certificate": {
+          "content": "MIIJyDCCCXW...plBLbm61IfFrgjCSh3pteYQ9XEx2s8eFFg"
+      },
+      "is-representative": false,
+      "ipaddress": "8.8.8.8"
+  },
+  "payer": {
+      "inn": "7381415822",
+      "name": "",
+      "organization": {
+          "kpp": "111135111"
+      },
+      "registration-number-pfr": "823-858-020760"
+  },
+  "recipient": {
+      "upfr-code": "666-666"
+  },
+  "builder-type": "urn:drafts-builder:pfr-report"
+}
