@@ -4,8 +4,8 @@
 .. _`Вопросы и ответы по отчетности`: https://www.kontur-extern.ru/support/faq
 .. _`Extern Test Tools`: https://developer.testkontur.ru/doc/extern.test.tools
 
-API Контур.Экстерн
-==================
+API Контур.Экстерн для банков
+=============================
 
 .. image:: /logo.png
    :width: 800
