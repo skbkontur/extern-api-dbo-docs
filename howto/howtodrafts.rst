@@ -65,8 +65,7 @@
 
         POST /v1/bd0cd3f6-315d-4f03-a9cc-3507f63265ed/drafts HTTP/1.1
         Host: extern-api.testkontur.ru
-        Authorization: auth.sid ****
-        X-Kontur-Apikey: ****
+        Authorization: Bearer <token>
         Accept: application/json
         Content-Type: application/json
         Content-Type: text/plain
@@ -156,8 +155,7 @@
 
 
         POST /v1/bd0cd3f6-315d-4f03-a9cc-3507f63265ed/contents HTTP/1.1
-        X-Kontur-Apikey: ****
-        Authorization: auth.sid ****
+        Authorization: Bearer <token>
         Content-Type: application/octet-stream
         Host: extern-api.testkontur.ru
         Accept-Encoding: gzip, deflate, br
@@ -173,8 +171,7 @@
 .. code-block::
    
     POST /v1/bd0cd3f6-315d-4f03-a9cc-3507f63265ed/drafts/d9622b9d-aa31-477b-a399-fc676588bfb5/documents HTTP/1.1
-    X-Kontur-Apikey: ****
-    Authorization: auth.sid ****
+    Authorization: Bearer <token>
     Accept: application/json
     Content-Type: application/json
     Host: extern-api.testkontur.ru
@@ -267,19 +264,20 @@
     2. Конвертируем полученную подпись в base64.
     3. Добавляем подпись в формате base64 в черновик. 
 
-**Тело запроса POST AddSignature:**
+**Запрос POST AddSignature:**
 
 .. code-block::
 
     POST /v1/bd0cd3f6-315d-4f03-a9cc-3507f63265ed/drafts/d9622b9d-aa31-477b-a399-fc676588bfb5/documents/4b3046fe-cabd-42e5-8618-8e9d9b2466a0/signatures HTTP/1.1
     Host: extern-api.testkontur.ru
-    Authorization: auth.sid ****
+    Authorization: Bearer <token>
     Accept: application/json
     Content-Type: application/json
-    X-Kontur-Apikey: ****
     Content-Type: application/pgp-signature
 
-    "<file contents here>"
+    {
+        "base64-content":"MIINFQYJKoZIhvcNAQcCoIINBjCCD...nOfRonWQdDi4Tavb9CLvI="
+    }
 
 
 Мы убедились, что файл отчета корректный, и подпись документа лежит в черновике. Можно переходить к подготовке черновика и отправке. 
@@ -324,8 +322,7 @@
 .. code-block::
 
     POST /v1/bd0cd3f6-315d-4f03-a9cc-3507f63265ed/drafts/d9622b9d-aa31-477b-a399-fc676588bfb5/check?deferred=true HTTP/1.1
-    X-Kontur-Apikey: ****
-    Authorization: auth.sid ****
+    Authorization: Bearer <token>
     Accept: application/json
     Content-Type: application/json
 
@@ -349,8 +346,7 @@
 .. code-block::
 
     GET /v1/bd0cd3f6-315d-4f03-a9cc-3507f63265ed/drafts/d9622b9d-aa31-477b-a399-fc676588bfb5/tasks/c0620f2f-ea43-465a-ab87-96995e0adcf8 HTTP/1.1
-    X-Kontur-Apikey: ****
-    Authorization: auth.sid ****
+    Authorization: Bearer <token>
     Accept: application/json
     Content-Type: application/json
     Host: extern-api.testkontur.ru
@@ -382,8 +378,7 @@
 .. code-block::
 
     POST /v1/bd0cd3f6-315d-4f03-a9cc-3507f63265ed/drafts/d9622b9d-aa31-477b-a399-fc676588bfb5/prepare?deferred=true HTTP/1.1
-    X-Kontur-Apikey: ****
-    Authorization: auth.sid ****
+    Authorization: Bearer <token>
     Accept: application/json
     Content-Type: application/json
 
@@ -439,8 +434,7 @@
 .. code-block::
 
     POST /v1/bd0cd3f6-315d-4f03-a9cc-3507f63265ed/drafts/d9622b9d-aa31-477b-a399-fc676588bfb5/send?deferred=true HTTP/1.1
-    X-Kontur-Apikey: ****
-    Authorization: auth.sid ****
+    Authorization: Bearer <token>
     Accept: application/json
     Content-Type: application/json
 
