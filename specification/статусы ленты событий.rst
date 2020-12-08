@@ -23,3 +23,61 @@
    "urn:transaction:processing-result-ok", "Отчет обработан успешно"
    "urn:transaction:acceptance-result-2ndfl", "Отчет 2-НДФЛ принят"
 
+ИОН
+~~~
+
+.. csv-table:: 
+   :header: "Статус", "Описание"
+   :widths: 20 40
+
+   "urn:transaction:request", "Отправка ИОН-запроса"
+   "urn:transaction:receipt-request-cu", "Запрос пришел в инспекцию"
+   "urn:transaction:receipt-date-confirmation-abonent", "Получено подтверждение даты отправки абонентом"
+   "urn:transaction:receipt-date-confirmation-cu", "Получено подтверждение даты отправки инспекцией"
+   "urn:transaction:acceptance-result-positive", "Запрос принят инспекцией"
+   "urn:transaction:acceptance-result-negative", "Запрос не принят инспекцией"
+   "urn:transaction:receipt-acceptance-result-abonent", "Подтверждение о получении результатов приема запроса абонентом"
+   "urn:transaction:receipt-acceptance-result-provider", "Подтверждение о получении результатов приема запроса спецоператором"
+   "urn:transaction:response", "Ответ на запрос"
+   "urn:transaction:receipt-response-abonent", "Подтверждение о получении ответа абонентом"
+   "urn:transaction:receipt-response-provider", "Подтверждение о получении ответа спецоператором"
+
+Письмо в ФНС
+~~~~~~~~~~~~
+
+.. csv-table:: 
+   :header: "Статус", "Описание"
+   :widths: 20 40
+
+   "urn:transaction:respondent-letter", "Письмо"
+   "urn:transaction:receipt-date-confirmation-abonent", "Получено подтверждение даты отправки абонентом"
+   "urn:transaction:receipt-cu", "Письмо пришло в инспекцию"
+   "urn:transaction:decline", "В обработке письма отказано"
+   "urn:transaction:receipt-acceptance-result-abonent", "Подтверждение о получении результатов приема запроса абонентом"
+
+Письмо из ФНC
+~~~~~~~~~~~~~
+
+.. csv-table:: 
+   :header: "Статус", "Описание"
+   :widths: 20 40
+
+   "urn:transaction:cu-letter", "Письмо от инспекции"
+   "urn:transaction:date-confirmation", "Подтверждение даты получения письма спецоператором"
+   "urn:transaction:letter-receipt-abonent", "Получение письма абонентом"
+   "urn:transaction:cu-group-letter", "Групповая рассылка от инспекции"
+   "urn:transaction:group-letter-receipt-abonent", "Получение групповой рассылки абонентом"
+
+Документ (Требование)	
+~~~~~~~~~~~~~~~~~~~~~
+
+.. csv-table:: 
+   :header: "Статус", "Описание"
+   :widths: 20 40
+
+   "urn:transaction:document", "Требование"
+   "urn:transaction:date-confirmation", "Подтверждение даты получения требования спецоператором"
+   "urn:transaction:receipt-abonent", "Подтверждение прочтения требования абонентом"
+   "urn:transaction:receiption-result-abonent-positive", "Отправка квитанциии на требование. Абонент согласен с требованием и будет отвечать на него"
+   "urn:transaction:receiption-result-abonent-negative", "Отправка отказа на требование. Абонент не согласен с требованием, причины отказа регламентированы"
+   "urn:transaction:receiption-result-cu", "Подтверждение получения квитанции/отказа инспекцией"

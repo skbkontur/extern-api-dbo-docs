@@ -11,3 +11,10 @@
    print
    content
    loks
+
+.. toctree::
+   :caption: Документооборот с ФНС
+   :titlesonly:
+
+   demand
+   check-demand
